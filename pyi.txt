@@ -1,0 +1,1 @@
+python -m PyInstaller --onefile --uac-admin -i main.ico -n wojanek main.py
