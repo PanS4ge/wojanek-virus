@@ -15,3 +15,4 @@ Badanie i analizowanie złośliwego oprogramowania w bezpiecznym, kontrolowanym 
 ------------------------------------------
 # Zobacz w akcji!
 - https://youtu.be/goHpE968vKU?t=340 - DaVinci (przez błąd mógł wyłączyć na drugim etapie - naprawione!)
+- https://youtu.be/UNEdsRpRh_A?t=709 - Obczajam
